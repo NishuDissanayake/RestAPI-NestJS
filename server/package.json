@@ -1,5 +1,5 @@
 {
-  "name": "@rest-api-nest-js/server",
+  "name": "@sample-rest/server",
   "private": true,
   "scripts": {
     "start": "nest start",
