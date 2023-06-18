@@ -54,6 +54,7 @@ export class AuthorControllerBase {
         createdAt: true,
         id: true,
         name: true,
+        publication: true,
         updatedAt: true,
       },
     });
@@ -80,6 +81,7 @@ export class AuthorControllerBase {
         createdAt: true,
         id: true,
         name: true,
+        publication: true,
         updatedAt: true,
       },
     });
@@ -107,6 +109,7 @@ export class AuthorControllerBase {
         createdAt: true,
         id: true,
         name: true,
+        publication: true,
         updatedAt: true,
       },
     });
@@ -143,6 +146,7 @@ export class AuthorControllerBase {
           createdAt: true,
           id: true,
           name: true,
+          publication: true,
           updatedAt: true,
         },
       });
@@ -178,6 +182,7 @@ export class AuthorControllerBase {
           createdAt: true,
           id: true,
           name: true,
+          publication: true,
           updatedAt: true,
         },
       });
