@@ -51,6 +51,17 @@ class AuthorWhereInput {
     nullable: true,
   })
   name?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  publication?: StringNullableFilter;
 }
 
 export { AuthorWhereInput as AuthorWhereInput };

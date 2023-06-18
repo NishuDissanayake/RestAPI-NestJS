@@ -37,6 +37,17 @@ class AuthorUpdateInput {
     nullable: true,
   })
   name?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  publication?: string | null;
 }
 
 export { AuthorUpdateInput as AuthorUpdateInput };

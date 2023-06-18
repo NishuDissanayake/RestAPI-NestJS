@@ -29,11 +29,12 @@ model Book {
 }
 
 model Author {
-  birthDate DateTime?
-  createdAt DateTime  @default(now())
-  id        String    @id @default(cuid())
-  name      String?
-  updatedAt DateTime  @updatedAt
+  birthDate   DateTime?
+  createdAt   DateTime  @default(now())
+  id          String    @id @default(cuid())
+  name        String?
+  publication String?
+  updatedAt   DateTime  @updatedAt
 }
 
 model Publication {
