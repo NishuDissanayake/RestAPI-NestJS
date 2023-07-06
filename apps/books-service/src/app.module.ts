@@ -12,6 +12,7 @@ import { ConfigModule, ConfigService } from "@nestjs/config";
 import { ServeStaticModule } from "@nestjs/serve-static";
 import { ServeStaticOptionsService } from "./serveStaticOptions.service";
 import { GraphQLModule } from "@nestjs/graphql";
+import { CustomMiddleware } from './custom.middleware';
 
 import { ACLModule } from "./auth/acl.module";
 import { AuthModule } from "./auth/auth.module";
@@ -48,12 +49,15 @@ import { AuthModule } from "./auth/auth.module";
       imports: [ConfigModule],
     }),
   ],
+  //Providers array
   providers: [
+    // Existing providers
     {
       provide: APP_INTERCEPTOR,
       scope: Scope.REQUEST,
-      useClass: MorganInterceptor("combined"),
+      useClass: MorganInterceptor('combined'),
     },
+    CustomMiddleware, // Adding CustomMiddleware
   ],
 })
-export class AppModule {}
+export class AppModule { }
